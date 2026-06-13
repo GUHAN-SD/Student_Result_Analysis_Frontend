@@ -1,0 +1,154 @@
+.sidebar {
+  width: 240px;
+  background: var(--nav);
+  display: flex; flex-direction: column;
+  position: sticky; top: 0; height: 100vh;
+  flex-shrink: 0; overflow-y: auto;
+  box-shadow: 2px 0 16px rgba(30,58,138,.15);
+  transition: background .25s;
+}
+[data-theme="apple"] .sidebar {
+  border-right: 1px solid var(--bdr);
+  box-shadow: none;
+}
+
+/* ── Brand ── */
+.sidebar-top {
+  padding: 20px 18px 16px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+[data-theme="apple"] .sidebar-top {
+  border-bottom: 1px solid var(--bdr);
+}
+
+.sidebar-brand      { display: flex; align-items: center; gap: 12px; }
+.sidebar-brand-icon {
+  width: 40px; height: 40px; border-radius: 12px;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,.2);
+}
+[data-theme="apple"] .sidebar-brand-icon {
+  background: #000; border-radius: 10px;
+}
+.sidebar-brand-name {
+  font-size: 15px; font-weight: 800; letter-spacing: -.3px;
+  color: var(--nav-txt); line-height: 1.2;
+}
+.sidebar-brand-sub {
+  font-size: 9px; color: var(--nav-icon);
+  margin-top: 2px; letter-spacing: .8px; text-transform: uppercase;
+}
+
+/* ── College info strip ── */
+.sidebar-college {
+  padding: 10px 18px;
+  background: rgba(255,255,255,.06);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  font-size: 10px; color: rgba(255,255,255,.5);
+  letter-spacing: .3px; line-height: 1.6;
+}
+[data-theme="apple"] .sidebar-college {
+  background: var(--sur2); color: var(--mut);
+  border-bottom: 1px solid var(--bdr);
+}
+[data-theme="cream"] .sidebar-college {
+  background: rgba(255,255,255,.05);
+  color: rgba(255,255,255,.45);
+  border-bottom: 1px solid rgba(255,255,255,.07);
+}
+
+/* ── Nav ── */
+.sidebar-nav {
+  flex: 1; padding: 10px 12px; overflow-y: auto;
+}
+.sidebar-footer {
+  padding: 10px 12px 16px;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+[data-theme="apple"] .sidebar-footer {
+  border-top: 1px solid var(--bdr);
+}
+
+.nav-section {
+  padding: 14px 8px 5px;
+  color: var(--nav-icon); font-size: 9px; font-weight: 700;
+  letter-spacing: 1.4px; text-transform: uppercase; opacity: .7;
+}
+
+.nav-item {
+  display: flex; align-items: center; gap: 10px;
+  width: 100%; padding: 10px 12px; margin-bottom: 2px;
+  background: transparent; border: none; border-radius: 10px;
+  color: var(--nav-icon); cursor: pointer;
+  font-size: 13px; font-weight: 500; text-align: left;
+  transition: .15s; font-family: var(--font-sans);
+  letter-spacing: .1px;
+}
+.nav-item:hover {
+  color: var(--nav-txt);
+  background: var(--nav-hover);
+}
+.nav-item.active {
+  color: var(--nav-txt);
+  background: rgba(255,255,255,.15);
+  font-weight: 700;
+  border-left: 3px solid #60a5fa;
+  padding-left: 9px;
+}
+[data-theme="apple"] .nav-item.active {
+  color: var(--acc);
+  background: var(--nav-act);
+  border-left: 3px solid var(--acc);
+}
+[data-theme="cream"] .nav-item.active {
+  border-left: 3px solid #fbbf24;
+}
+.nav-item.logout { color: var(--nav-icon); }
+.nav-item.logout:hover {
+  color: #ff6b6b;
+  background: rgba(255,59,48,.1);
+}
+.nav-icon {
+  font-size: 16px; width: 22px;
+  text-align: center; flex-shrink: 0;
+}
+
+/* ── Profile card ── */
+.sb-profile-card {
+  border-radius: 12px; padding: 14px; margin-top: 14px;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.1);
+}
+[data-theme="apple"] .sb-profile-card {
+  background: var(--sur2); border: 1px solid var(--bdr);
+}
+.sb-avatar {
+  width: 42px; height: 42px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 900; color: #fff; font-size: 17px;
+  margin-bottom: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,.2);
+}
+.sb-name {
+  font-weight: 700; font-size: 13px; color: var(--nav-txt);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.sb-reg {
+  font-family: var(--font-mono); color: var(--nav-icon);
+  font-size: 10px; margin-top: 2px;
+}
+.sb-dept-tag {
+  display: inline-flex; align-items: center; gap: 4px;
+  margin-top: 8px; padding: 3px 10px; border-radius: 20px;
+  font-size: 10px; font-weight: 700;
+  background: rgba(255,255,255,.15); color: var(--nav-txt);
+}
+[data-theme="apple"] .sb-dept-tag {
+  background: var(--bdr); color: var(--txt);
+}
+.sb-cgpa { margin-top: 6px; font-size: 11px; color: var(--nav-icon); }
+.sb-cgpa span {
+  font-weight: 700; font-family: var(--font-mono); color: var(--nav-txt);
+}
