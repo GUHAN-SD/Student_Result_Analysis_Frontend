@@ -4,3 +4,6 @@ buildCommand = "npm install && npm run build"
 
 [deploy]
 startCommand = "npx serve -s build -l $PORT"
+
+[variables]
+NODE_VERSION = "20"
